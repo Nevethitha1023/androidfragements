@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <fragment
+        android:id="@+id/basicDetailsFragment"
+        android:name="androidx.fragment.app.FragmentContainerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"
+        app:layout="@layout/fragment_student_basic_details" />
+
+    <fragment
+        android:id="@+id/markFragment"
+        android:name="androidx.fragment.app.FragmentContainerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/basicDetailsFragment"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"
+        app:layout="@layout/fragment_student_mark" />
+
+    <Button
+        android:id="@+id/showBasicDetailsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:text="Show Basic Details"
+        android:onClick="showBasicDetails" />
+
+    <Button
+        android:id="@+id/showMarkButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/showBasicDetailsButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Show Mark"
+        android:onClick="showMark" />
+
+</RelativeLayout>
